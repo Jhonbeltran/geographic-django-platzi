@@ -16,6 +16,7 @@
 * migrations/ (carpeta) --> Cambios en la estructura de la base de datos
 * test.py --> Pruebas Unitarias
 * views.py --> Componente encargado de enlazar modelos con templates y ejecutar operaciones lógicas
+* templates/<nombre de aplicacion> (carpeta) --> en donde almacenaremos todos los templates que usa la aplicacion en cuestion un ejemplo de ello es el path: `countries/templates/countries/` se pone dos veces countries porque Django toma todas las carpetas de templates y las lee como si fueran una sola.  
 
 
 
