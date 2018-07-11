@@ -1,6 +1,6 @@
-##Analicemos la estructura de carpetas y archivos que se generaron:
+## Analicemos la estructura de carpetas y archivos que se generaron:
 
-###Dentro de la "App Central"
+### Dentro de la "App Central"
 
 * init.py --> Le dice a Python que es un paquete
 * settings.py --> Configuraciones del proyecto
