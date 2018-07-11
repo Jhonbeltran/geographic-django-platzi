@@ -23,9 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_v(01n3%$yj41-c@+dc)%ysrpt&wl43!to@+kc&q9-6hmi(_cv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    # Esta configuración la usaremos en produccion para
+    # poner la url a la cual va a responder nuestra aplicacion
+]
 
 
 # Application definition
@@ -37,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Acá instalararemos las aplicaciones que vamos creando con
+    # ./manage.py startapp <nombre_de_la_app>
 ]
 
 MIDDLEWARE = [
@@ -47,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Hooks para nuestro proyecto
 ]
 
 ROOT_URLCONF = 'geographic.urls'
@@ -118,3 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Para hacer uso de nuestras configuraciones locales
+
+try:
+    from geographic.local_settings import *
+except Exception as e:
+    raise e

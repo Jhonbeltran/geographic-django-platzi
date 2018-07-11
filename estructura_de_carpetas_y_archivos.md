@@ -6,6 +6,7 @@
 * settings.py --> Configuraciones del proyecto
 * urls.py --> URL’s del proyecto
 * wsgl.py --> Es un archivo que mas adelante nos va a permitir desplegar el proyecto
+* local_settings --> Archivo que crearemos para alojar sólamente nuestras configuraciones locales
 
 ### Dentro de nuevas App
 * init.py --> Le dice a Python que es un paquete
