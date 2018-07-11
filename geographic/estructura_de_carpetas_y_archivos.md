@@ -22,4 +22,10 @@
 
 * manage.py --> Poner el proyecto dentro del path de Django, Contiene un listado de posibilidades utilidades que nos van a servir para la gestión del proyecto.
 
+### Base de datos por defecto
+
+* db.sqlite3 --> Base de Datos por Defecto Sqlite 3
+
 > Recuerda que cada aplicación de Django se compone de diferentes aplicaciones, de forma que tenemos mini-apps dentro de las aplicaciones más grandes, esto nos sirve para mantener el código organizado y reusar dichas aplicaciones en otros proyectos.
+
+> Cada App de Django es una librería en si misma
