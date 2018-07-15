@@ -18,13 +18,17 @@ from django.urls import path
 #Function Based View
 """from countries.views import home"""
 #Class Based View
-from countries.views import HomeView
+"""from countries.views import HomeView"""
+##Comportamiento por defecto
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #Vistas basadas en Funciones (Function Based View)
     #path("", home)
-    
+
     #Class Based View
-    path("", HomeView.as_view())
+    #path("", HomeView.as_view())
+    ##Comportamiento por defecto
+    path("", TemplateView.as_view(template_name='countries/home.html'))
 ]
