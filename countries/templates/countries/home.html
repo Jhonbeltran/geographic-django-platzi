@@ -5,8 +5,12 @@
 	<title>Inicio</title>
 </head>
 <body>
-	<h1>Haruki Murakami</h1>
-	<p>Lo que importa no son las grandes ideas de los otros sino las pequeñas cosas que se te ocurren a ti.</p>
-	<p><b>"Sputnik, mi amor" </b>(1999)</p>
+	<h1>Los Mejores Paises</h1>
+	<h2>En la Compa del Mundo 2018</h2>
+	<ol>
+		{% for country in countries %}
+			<li>{{country}}</li>
+		{% endfor %}
+	</ol>
 </body>
 </html>

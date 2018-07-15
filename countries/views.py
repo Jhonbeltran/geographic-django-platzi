@@ -18,3 +18,6 @@ class HomeView(TemplateView):
 	#	return render(request, 'countries/home.html')
 	##Comportamiento por defecto
 	template_name = 'countries/home.html'
+	def get_context_data(self, *args, **kwargs):
+		countries = ['Francia', 'Croacia', 'Bélgica']
+		return {'countries':countries}
