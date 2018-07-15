@@ -8,7 +8,7 @@
 	<h1>Los Mejores Paises</h1>
 	<h2>En la Compa del Mundo 2018</h2>
 		{% for country in countries %}
-			<h3>{{country.name}}</h3>
+			<h3>{{country.name|title}}</h3>
 			<p>{{country.pos}}</p>
 			<img src="{{country.shield}}" height="200" alt="">
 		{% endfor %}
