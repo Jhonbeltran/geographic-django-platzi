@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from countries.views import home
+#Function Based View
+"""from countries.views import home"""
+#Class Based View
+from countries.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #Vistas basadas en Funciones (Function Based View)
-    path("", home)
+    #path("", home)
+    
+    #Class Based View
+    path("", HomeView.as_view())
 ]
