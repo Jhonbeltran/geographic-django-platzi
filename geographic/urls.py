@@ -20,7 +20,7 @@ from django.urls import path
 #Class Based View
 """from countries.views import HomeView"""
 ##Comportamiento por defecto
-from django.views.generic import TemplateView
+from countries.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +30,5 @@ urlpatterns = [
     #Class Based View
     #path("", HomeView.as_view())
     ##Comportamiento por defecto
-    path("", TemplateView.as_view(template_name='countries/home.html'))
+    path("", HomeView.as_view())
 ]
