@@ -19,5 +19,13 @@ class HomeView(TemplateView):
 	##Comportamiento por defecto
 	template_name = 'countries/home.html'
 	def get_context_data(self, *args, **kwargs):
-		countries = ['Francia', 'Croacia', 'Bélgica']
+
+		france = {'name':'Francia', 'pos':'Campeón',
+				  'shield':'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/France_in_the_World_%28%2BEU%29.svg/250px-France_in_the_World_%28%2BEU%29.svg.png'}
+		croatia = {'name':'Croacia', 'pos':'Sub Campeón',
+				  'shield':'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Croatia_in_European_Union.svg/250px-Croatia_in_European_Union.svg.png'}
+		belgium = {'name':'Bélgica', 'pos':'Tercer Lugar',
+				  'shield':'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Belgium_in_European_Union.svg/250px-Belgium_in_European_Union.svg.png'}
+
+		countries = [france, croatia, belgium]
 		return {'countries':countries}
