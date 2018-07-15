@@ -9,6 +9,9 @@
 	<h2>En la Compa del Mundo 2018</h2>
 		{% for country in countries %}
 			<h3>{{country.name|title}}</h3>
+			{% if country.pos == 'Campeón' %}
+				<p>🏆</p>
+			{% endif %}
 			<p>{{country.pos}}</p>
 			<img src="{{country.shield}}" height="200" alt="">
 		{% endfor %}
