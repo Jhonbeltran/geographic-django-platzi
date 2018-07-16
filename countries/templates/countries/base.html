@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Geo{% endblock %}</title>
+  </head>
+  <body style="margin: 0 0 0 0;">
+  <style media="screen">
+    .header {
+      border: 1px solid #212121;
+      margin: 0 0 0 0;
+      text-align: center;
+      padding: 20px 20px 20px 20px;
+      background-color: #607D8B;
+    }
+    .content {
+      padding-top: 0px;
+    	padding-bottom: 20px;
+    	padding-left: 50px;
+    	padding-right: 50px;
+    }
+  </style>
+    <div class="header">
+      <strong>Geographic</strong>
+    </div>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

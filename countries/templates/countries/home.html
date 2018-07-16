@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Inicio</title>
-</head>
-<body style="
-	padding-top: 30px;
-	padding-bottom: 20px;
-	padding-left: 50px;
-	padding-right: 50px;
-">
+{% extends "countries/base.html" %}
+{% block title %}Inicio - Geo{% endblock %}
+{% block content %}
 	<h1>Los Mejores Paises</h1>
 	<h2>En la Copa del Mundo 2018</h2>
 	<a href="/uniform">Uniforme</a>
@@ -50,5 +41,4 @@
 	<h3>{% filter force_escape|lower %}
     rUSIA 2018 - FIFA
 	{% endfilter %}</h3>
-</body>
-</html>
+{% endblock %}
