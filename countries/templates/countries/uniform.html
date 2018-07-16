@@ -1,9 +1,12 @@
 {% extends "countries/base.html" %}
 {% block title %}Uniform - Geo{% endblock %}
 {% block content %}
+{% include "countries/intro.html" %}
     {% for country in countries %}
+    <div class="block_country">
       <h2>{{country.name}}</h2>
       <img src="{{country.uniform}}" height="100" alt="">
+    </div>
     {% endfor %}
     <p><a href="/">Inicio</a></p>
 {% endblock %}

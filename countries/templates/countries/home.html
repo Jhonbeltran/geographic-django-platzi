@@ -1,15 +1,9 @@
 {% extends "countries/base.html" %}
 {% block title %}Inicio - Geo{% endblock %}
 {% block content %}
-	<h1>Los Mejores Paises</h1>
-	<h2>En la Copa del Mundo 2018</h2>
-	<a href="/uniform">Uniforme</a>
 
-	<p>
-		<strong>Logged as: </strong>
-		{{request.user}}
-	</p>
-
+{% include "countries/intro.html" %}
+<p><a href="/uniform">Uniforme</a></p>
 
 	{% comment %}
 	Template Tags With Jinja:
@@ -26,8 +20,6 @@
 
 	https://docs.djangoproject.com/en/dev/ref/templates/builtins/
 	{% endcomment %}
-
-	<h3>{% now "Y-m-d"%}</h3>
 
 	{% for country in countries %}
 		<h3>{{country.name|title}}</h3>
