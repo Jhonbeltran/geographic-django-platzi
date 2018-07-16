@@ -22,12 +22,14 @@
 	{% endcomment %}
 
 	{% for country in countries %}
-		<h3>{{country.name|title}}</h3>
-		{% if country.pos == 'Campeón' %}
-			<p>🏆</p>
-		{% endif %}
-		<p>{{country.pos}}</p>
-		<img src="{{country.map}}" height="200" alt="">
+		<div align="center">
+			<h3>{{country.name|title}}</h3>
+			{% if country.pos == 'Campeón' %}
+				<p>🏆</p>
+			{% endif %}
+			<p>{{country.pos}}</p>
+			<img src="{{country.map}}" height="200" alt="">
+		</div>
 		<p>{% lorem %}</p>
 	{% endfor %}
 	<h3>{% filter force_escape|lower %}
