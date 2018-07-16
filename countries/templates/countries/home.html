@@ -12,6 +12,7 @@
 ">
 	<h1>Los Mejores Paises</h1>
 	<h2>En la Copa del Mundo 2018</h2>
+	<a href="/uniform">Uniforme</a>
 
 	{% comment %}
 	Template Tags With Jinja:
@@ -37,7 +38,7 @@
 			<p>🏆</p>
 		{% endif %}
 		<p>{{country.pos}}</p>
-		<img src="{{country.shield}}" height="200" alt="">
+		<img src="{{country.map}}" height="200" alt="">
 		<p>{% lorem %}</p>
 	{% endfor %}
 	<h3>{% filter force_escape|lower %}

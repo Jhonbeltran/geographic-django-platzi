@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Uniform</title>
+  </head>
+  <body style="
+  	padding-top: 30px;
+  	padding-bottom: 20px;
+  	padding-left: 50px;
+  	padding-right: 50px;
+  ">
+    {% for country in countries %}
+      <h2>{{country.name}}</h2>
+      <img src="{{country.uniform}}" height="100" alt="">
+    {% endfor %}
+    <p><a href="/">Inicio</a></p>
+
+  </body>
+</html>

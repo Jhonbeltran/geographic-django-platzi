@@ -21,6 +21,7 @@ from django.urls import path
 """from countries.views import HomeView"""
 ##Comportamiento por defecto
 from countries.views import HomeView
+from countries.views import UniformView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +31,6 @@ urlpatterns = [
     #Class Based View
     #path("", HomeView.as_view())
     ##Comportamiento por defecto
-    path("", HomeView.as_view())
+    path("", HomeView.as_view()),
+    path("uniform/", UniformView.as_view())
 ]
