@@ -4,7 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Inicio</title>
 </head>
-<body>
+<body style="
+	padding-top: 30px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+">
 	<h1>Los Mejores Paises</h1>
 	<h2>En la Copa del Mundo 2018</h2>
 
@@ -13,7 +18,18 @@
 	Podemos usar como vemos más abajo:
 	* for
 	* if
+	* lorem ipsum (generador)
+	* now (fecha actual)
+	* comment (comentarios)
+	Filters
+	* title : combierte la primera letra de cada palabra en mayuscula
+	* force_scape : elimina los caracteres especiales
+	* lower: pone las letras en minuscula
+
+	https://docs.djangoproject.com/en/dev/ref/templates/builtins/
 	{% endcomment %}
+
+	<h3>{% now "Y-m-d"%}</h3>
 
 	{% for country in countries %}
 		<h3>{{country.name|title}}</h3>
@@ -22,6 +38,10 @@
 		{% endif %}
 		<p>{{country.pos}}</p>
 		<img src="{{country.shield}}" height="200" alt="">
+		<p>{% lorem %}</p>
 	{% endfor %}
+	<h3>{% filter force_escape|lower %}
+    rUSIA 2018 - FIFA
+	{% endfilter %}</h3>
 </body>
 </html>
