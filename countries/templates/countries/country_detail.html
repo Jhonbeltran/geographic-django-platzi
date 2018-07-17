@@ -1,6 +1,24 @@
 {% extends "countries/base.html" %}
-{% block title %}Inicio - Geo{% endblock %}
+{% block title %}{{code}}{% endblock %}
 {% block content %}
 {% include "countries/intro.html" %}
-{{code}}
+<div align="center">
+  {% for country in countries %}
+    <div class="breadcrumb border block_country" align="center" display="inline">
+      <a href="http://127.0.0.1:8000/countries/{{country.code}}">{{country.name}}</a>
+    </div>
+  {% endfor %}
+</div>
+<div class="detail" align="center">
+  {% for country in countries %}
+
+      {% if country.code == code %}
+        <h1>{{country.name|title}} ({{code}})</h1>
+        <img src="{{country.map}}" alt="">
+        <img src="{{country.uniform}}" height="200" alt="">
+        <h3>{{country.pos}}</h3>
+      {% endif %}
+
+  {% endfor %}
+</div>
 {% endblock %}
