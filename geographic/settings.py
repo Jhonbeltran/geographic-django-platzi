@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Acá instalararemos las aplicaciones que vamos creando con
     # ./manage.py startapp <nombre_de_la_app>
-    'countries.apps.CountriesConfig'
+    'countries.apps.CountriesConfig',
+    'continents.apps.ContinentsConfig'
 ]
 
 MIDDLEWARE = [

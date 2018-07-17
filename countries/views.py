@@ -21,3 +21,10 @@ class HomeView(TemplateView):
 
 class UniformView(TemplateView):
 	template_name = 'countries/uniform.html'
+
+class CountryDetalView(TemplateView):
+	template_name = 'countries/country_detail.html'
+
+	def get_context_data(self, *args, **kwargs):
+		code = kwargs['code']
+		return {'code': code}
