@@ -2,18 +2,12 @@
 {% block title %}{{code}}{% endblock %}
 {% block content %}
 {% include "countries/intro.html" %}
-<div align="center">
-  {% for country in countries %}
-    <div class="breadcrumb border block_country" align="center" display="inline">
-      <a href="http://127.0.0.1:8000/countries/{{country.code}}">{{country.name}}</a>
-    </div>
-  {% endfor %}
-</div>
+{% include "countries/breadcrumbs.html" %}
 <div class="detail" align="center">
   {% for country in countries %}
 
       {% if country.id == id %}
-        <h1>{{country.name|title}} ({{code}})</h1>
+        <h1>{{country.name|title}} ({{country.code}})</h1>
         <img src="{{country.map}}" alt="">
         <img src="{{country.uniform}}" height="200" alt="">
         <h3>{{country.pos}}</h3>

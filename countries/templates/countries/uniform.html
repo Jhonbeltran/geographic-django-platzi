@@ -6,7 +6,9 @@
   {% for country in countries %}
   <div class="block_country">
     <h2>{{country.name|title}}</h2>
-    <img src="{{country.uniform}}" height="100" alt="">
+    <a href="{% url "country_id_detail" id=country.id %}">
+      <img src="{{country.uniform}}" height="100" alt="">
+    </a>
   </div>
   {% endfor %}
   <p><a href="/">Inicio</a></p>
