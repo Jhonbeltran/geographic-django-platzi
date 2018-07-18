@@ -5,6 +5,6 @@ from countries.views import (HomeView, UniformView,
                              CountryDetailView,CountryIdDetailView)
 
 urlpatterns = [
-    path("countries/<int:id>/", CountryIdDetailView.as_view(), name="country_id_detail"),
-    path("countries/<code>/", CountryDetailView.as_view(), name="country_code_detail"),
+    path("<int:id>/", CountryIdDetailView.as_view(), name="country_id_detail"),
+    path("<code>/", CountryDetailView.as_view(), name="country_code_detail"),
 ]
