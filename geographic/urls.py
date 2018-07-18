@@ -20,9 +20,7 @@ from django.urls import path, include
 #Class Based View
 """from countries.views import HomeView"""
 ##Comportamiento por defecto
-from countries.views import (HomeView, UniformView,
-                             CountryDetailView,CountryIdDetailView)
-from continents.views import ContinentsView, ContinentsIdDetailView
+from countries.views import (HomeView, UniformView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,6 +32,6 @@ urlpatterns = [
     ##Comportamiento por defecto
     path("", HomeView.as_view(), name="home"),
     path("uniform/", UniformView.as_view(), name="uniform"),
-    path("continents/", include("continents.urls")),
-    path("countries/", include("countries.urls"))
+    path("continents/", include("continents.urls", namespace="continents")),
+    path("countries/", include("countries.urls", namespace="countries"))
 ]

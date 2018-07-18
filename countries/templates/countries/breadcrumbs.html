@@ -1,7 +1,7 @@
 <div align="center">
   {% for country in countries %}
     <div class="breadcrumb border block_country" align="center" display="inline">
-      <a href="{% url "country_code_detail" code=country.code %}">{{country.name}}</a>
+      <a href="{% url "countries:code_detail" code=country.code %}">{{country.name}}</a>
     </div>
   {% endfor %}
 </div>

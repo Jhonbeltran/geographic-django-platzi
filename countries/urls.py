@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.urls import path
+from countries.views import (CountryDetailView,CountryIdDetailView)
 
-from countries.views import (HomeView, UniformView,
-                             CountryDetailView,CountryIdDetailView)
+app_name = 'countries'
 
 urlpatterns = [
-    path("<int:id>/", CountryIdDetailView.as_view(), name="country_id_detail"),
-    path("<code>/", CountryDetailView.as_view(), name="country_code_detail"),
+    path("<int:id>/", CountryIdDetailView.as_view(), name="id_detail"),
+    path("<code>/", CountryDetailView.as_view(), name="code_detail"),
 ]
