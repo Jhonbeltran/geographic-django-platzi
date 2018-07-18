@@ -22,9 +22,16 @@ class HomeView(TemplateView):
 class UniformView(TemplateView):
 	template_name = 'countries/uniform.html'
 
-class CountryDetalView(TemplateView):
+class CountryDetailView(TemplateView):
 	template_name = 'countries/country_detail.html'
 
 	def get_context_data(self, *args, **kwargs):
 		code = kwargs['code']
 		return {'code': code}
+
+class CountryIdDetailView(TemplateView):
+	template_name = 'countries/country_id_detail.html'
+
+	def get_context_data(self, *args, **kwargs):
+		code_id = kwargs['id']
+		return {'id': code_id}
