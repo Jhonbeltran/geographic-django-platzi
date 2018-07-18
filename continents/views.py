@@ -5,11 +5,9 @@ from django.views.generic import TemplateView
 class ContinentsView(TemplateView):
     template_name = 'continents/continents.html'
 
-    def get_context_data(self, *args, **kwargs):
-        america = {'name': 'América', 'quantity': 8, 'semifinalist': 0}
-        europe = {'name': 'Europa', 'quantity': 14, 'semifinalist': 4}
-        asia = {'name': 'Asia', 'quantity': 4, 'semifinalist': 0 }
-        oceania = {'name': 'Oceanía', 'quantity': 1, 'semifinalist': 0}
-        africa = {'name': 'África', 'quantity': 5, 'semifinalist': 0 }
-        continents = [america, europe, asia, oceania, africa]
-        return{'continents':continents}
+class ContinentsIdDetailView(TemplateView):
+	template_name = 'continents/continents_id_detail.html'
+
+	def get_context_data(self, *args, **kwargs):
+		code_id = kwargs['id']
+		return {'id': code_id}

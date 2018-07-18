@@ -5,7 +5,7 @@
 {% include "countries/intro.html" %}
       {% for continent in continents %}
       <div class="border block_country" align="center">
-        <h2>{{continent.name}}</h2>
+        <a href="{{continent.detail_url}}"><h2>{{continent.name}}</h2></a>
         <p>
           <strong>Cantidad de equipos clasificados: </strong>
           {{continent.quantity}}

@@ -22,7 +22,7 @@ from django.urls import path
 ##Comportamiento por defecto
 from countries.views import (HomeView, UniformView,
                              CountryDetailView,CountryIdDetailView)
-from continents.views import ContinentsView
+from continents.views import ContinentsView, ContinentsIdDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,5 +36,6 @@ urlpatterns = [
     path("uniform/", UniformView.as_view(), name="uniform"),
     path("continents/", ContinentsView.as_view(), name="continents_home"),
     path("countries/<int:id>/", CountryIdDetailView.as_view(), name="country_id_detail"),
-    path("countries/<code>/", CountryDetailView.as_view(), name="country_code_detail")
+    path("countries/<code>/", CountryDetailView.as_view(), name="country_code_detail"),
+    path("continents/<int:id>/", ContinentsIdDetailView.as_view(), name="continent_id_detail")
 ]
