@@ -5,7 +5,7 @@
 <div align="center">
   {% for country in countries %}
   <div class="block_country">
-    <h2>{{country.name}}</h2>
+    <h2>{{country.name|title}}</h2>
     <img src="{{country.uniform}}" height="100" alt="">
   </div>
   {% endfor %}

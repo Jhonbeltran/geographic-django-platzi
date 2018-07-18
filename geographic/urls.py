@@ -32,9 +32,9 @@ urlpatterns = [
     #Class Based View
     #path("", HomeView.as_view())
     ##Comportamiento por defecto
-    path("", HomeView.as_view()),
-    path("uniform/", UniformView.as_view()),
-    path("continents/", ContinentsView.as_view()),
-    path("countries/<int:id>/", CountryIdDetailView.as_view()),
-    path("countries/<code>/", CountryDetailView.as_view())
+    path("", HomeView.as_view(), name="home"),
+    path("uniform/", UniformView.as_view(), name="uniform"),
+    path("continents/", ContinentsView.as_view(), name="continents_home"),
+    path("countries/<int:id>/", CountryIdDetailView.as_view(), name="country_id_detail"),
+    path("countries/<code>/", CountryDetailView.as_view(), name="country_code_detail")
 ]

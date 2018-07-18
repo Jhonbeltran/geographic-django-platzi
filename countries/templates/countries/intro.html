@@ -6,4 +6,16 @@
     {{request.user}}
   </p>
   <h3>{% now "Y-m-d"%}</h3>
+  <div align="center">
+      <div class="breadcrumb border block_country" align="center" display="inline">
+        <p><a href="{% url "uniform" %}">Uniformes</a></p>
+      </div>
+      <div class="breadcrumb border block_country" align="center" display="inline">
+        <p><a href="{% url "home" %}">Inicio</a></p>
+      </div>
+      <div class="breadcrumb border block_country" align="center" display="inline">
+        <p><a href="{% url "continents_home" %}">Continentes</a></p>
+      </div>
+  </div>
+
 </div>
